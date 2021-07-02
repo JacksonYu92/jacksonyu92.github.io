@@ -829,10 +829,10 @@ input, select, textarea {
 			}
 		}
 
-		#bg {
+	/*	#bg {
 			background-size: 1500px auto;
 			width: 4500px;
-		} }
+		} }*/
 
 /* Normal */
 
@@ -911,10 +911,10 @@ input, select, textarea {
 			}
 		}
 
-		#bg {
+		/*#bg {
 			background-size: 750px auto;
 			width: 2250px;
-		} }
+		} }*/
 
 /* Mobile */
 
@@ -997,10 +997,10 @@ input, select, textarea {
 			}
 		}
 
-		#bg {
+	/*	#bg {
 			background-size: 300px auto;
 			width: 900px;
-		}
+		}*/
 
 	/* Header */
 
