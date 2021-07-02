@@ -112,7 +112,7 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+	/*	border-bottom: dotted 1px;*/
 		color: inherit;
 		outline: 0;
 		text-decoration: none;
@@ -120,7 +120,18 @@ input, select, textarea {
 
 		a:hover {
 			border-color: transparent;
+			/*color: #47D3E5;*/
+	        font-weight: 900;
 		}
+
+        .hello:after {
+            content: "Jackson Yu";
+        }
+
+		.hello:hover:after {
+            content: "Hey!";
+		}
+
 
 /* Icon */
 
