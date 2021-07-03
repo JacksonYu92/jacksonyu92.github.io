@@ -2627,7 +2627,10 @@ input, select, textarea {
 		box-shadow: inset 0 0 0 1px #47D3E5;
 		color: #47D3E5;
 	}
-
+/*font awesome icon hover*/
+    i:hover {
+        color: #47D3E5;
+    }
 /* Image */
 
 	.image {
@@ -2800,6 +2803,110 @@ input, select, textarea {
 				ul.actions.stacked li:first-child {
 					padding-top: 0;
 				}
+
+/*			.scroll {
+                width: 50px;
+                height: 50px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                position: relative;
+                animation: down 1.5s infinite;
+                -webkit-animation: down 1.5s infinite;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    left: 18px;
+                    width: 18px;
+                    height: 18px;
+                    border-left: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            @keyframes down {
+                0% {
+                    transform: translate(0);
+                }
+                20% {
+                    transform: translateY(15px);
+                }
+                40% {
+                    transform: translate(0);
+                }
+            }
+
+            @-webkit-keyframes down {
+                0% {
+                    transform: translate(0);
+                }
+                20% {
+                    transform: translateY(15px);
+                }
+                40% {
+                    transform: translate(0);
+                }
+            }*/
+
+/*scroll-down-btn*/
+            .scroll-down-btn a {
+              padding-top: 80px;
+            }
+
+            .scroll-down-btn a span {
+              position: absolute;
+              top: 98%;
+              left: 50%;
+              width: 30px;
+              height: 30px;
+              margin-left: -12px;
+              border-left: 3px solid #fff;
+              border-bottom: 3px solid #fff;
+              -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+              -webkit-animation: sdb07 2s infinite;
+              animation: sdb07 2s infinite;
+              opacity: 0;
+              box-sizing: border-box;
+            }
+            .scroll-down-btn a span:nth-of-type(1) {
+              -webkit-animation-delay: 0s;
+              animation-delay: 0s;
+            }
+            .scroll-down-btn a span:nth-of-type(2) {
+              top: 90%;
+              -webkit-animation-delay: .15s;
+              animation-delay: .15s;
+            }
+            .scroll-down-btn a span:nth-of-type(3) {
+              top: 82%;
+              -webkit-animation-delay: .3s;
+              animation-delay: .3s;
+            }
+            @-webkit-keyframes sdb07 {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+            @keyframes sdb07 {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+
 
 		ul.actions.fit {
 			width: calc(100% + 1rem);
@@ -8913,3 +9020,4 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
