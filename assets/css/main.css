@@ -129,7 +129,7 @@ input, select, textarea {
         }
 
 		.hello:hover:after {
-            content: "Hey There";
+            content: "About Me";
 		}
 
 
