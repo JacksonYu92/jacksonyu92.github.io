@@ -337,96 +337,119 @@
 							}, 275);
 
 						});
-						// Menu.
-								var $menu = $('#menu');
 
-								$menu.wrapInner('<div class="inner"></div>');
+        //uofm certificate imgs modal
+        // Get the modal
+            var modal = document.getElementById("myModal");
 
-								$menu._locked = false;
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
 
-								$menu._lock = function() {
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-									if ($menu._locked)
-										return false;
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
 
-									$menu._locked = true;
+        // Menu.
+                var $menu = $('#menu');
 
-									window.setTimeout(function() {
-										$menu._locked = false;
-									}, 350);
+                $menu.wrapInner('<div class="inner"></div>');
 
-									return true;
+                $menu._locked = false;
 
-								};
+                $menu._lock = function() {
 
-								$menu._show = function() {
+                    if ($menu._locked)
+                        return false;
 
-									if ($menu._lock())
-										$body.addClass('is-menu-visible');
+                    $menu._locked = true;
 
-								};
+                    window.setTimeout(function() {
+                        $menu._locked = false;
+                    }, 350);
 
-								$menu._hide = function() {
+                    return true;
 
-									if ($menu._lock())
-										$body.removeClass('is-menu-visible');
+                };
 
-								};
+                $menu._show = function() {
 
-								$menu._toggle = function() {
+                    if ($menu._lock())
+                        $body.addClass('is-menu-visible');
 
-									if ($menu._lock())
-										$body.toggleClass('is-menu-visible');
+                };
 
-								};
+                $menu._hide = function() {
 
-								$menu
-									.appendTo($body)
-									.on('click', function(event) {
-										event.stopPropagation();
-									})
-									.on('click', 'a', function(event) {
+                    if ($menu._lock())
+                        $body.removeClass('is-menu-visible');
 
-										var href = $(this).attr('href');
+                };
 
-										event.preventDefault();
-										event.stopPropagation();
+                $menu._toggle = function() {
 
-										// Hide.
-											$menu._hide();
+                    if ($menu._lock())
+                        $body.toggleClass('is-menu-visible');
 
-										// Redirect.
-											if (href == '#menu')
-												return;
+                };
 
-											window.setTimeout(function() {
-												window.location.href = href;
-											}, 350);
+                $menu
+                    .appendTo($body)
+                    .on('click', function(event) {
+                        event.stopPropagation();
+                    })
+                    .on('click', 'a', function(event) {
 
-									})
-									.append('<a class="close" href="#menu">Close</a>');
+                        var href = $(this).attr('href');
 
-								$body
-									.on('click', 'a[href="#menu"]', function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
 
-										event.stopPropagation();
-										event.preventDefault();
+                        // Hide.
+                            $menu._hide();
 
-										// Toggle.
-											$menu._toggle();
+                        // Redirect.
+                            if (href == '#menu')
+                                return;
 
-									})
-									.on('click', function(event) {
+                            window.setTimeout(function() {
+                                window.location.href = href;
+                            }, 350);
 
-										// Hide.
-											$menu._hide();
+                    })
+                    .append('<a class="close" href="#menu">Close</a>');
 
-									})
-									.on('keydown', function(event) {
+                $body
+                    .on('click', 'a[href="#menu"]', function(event) {
 
-										// Hide on escape.
-											if (event.keyCode == 27)
-												$menu._hide();
+                        event.stopPropagation();
+                        event.preventDefault();
 
-									});
+                        // Toggle.
+                            $menu._toggle();
+
+                    })
+                    .on('click', function(event) {
+
+                        // Hide.
+                            $menu._hide();
+
+                    })
+                    .on('keydown', function(event) {
+
+                        // Hide on escape.
+                            if (event.keyCode == 27)
+                                $menu._hide();
+
+                    });
 })(jQuery);
