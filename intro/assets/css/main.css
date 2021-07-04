@@ -2856,7 +2856,7 @@ input, select, textarea {
 
             .scroll-down-btn a span {
               position: absolute;
-              top: 98%;
+              top: 192%;
               left: 50%;
               width: 30px;
               height: 30px;
@@ -2875,12 +2875,12 @@ input, select, textarea {
               animation-delay: 0s;
             }
             .scroll-down-btn a span:nth-of-type(2) {
-              top: 90%;
+              top: 184%;
               -webkit-animation-delay: .15s;
               animation-delay: .15s;
             }
             .scroll-down-btn a span:nth-of-type(3) {
-              top: 82%;
+              top: 176%;
               -webkit-animation-delay: .3s;
               animation-delay: .3s;
             }
@@ -3390,7 +3390,8 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px;
+				/*border: solid 1px;*/
+				border: none;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
