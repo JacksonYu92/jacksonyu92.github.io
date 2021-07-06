@@ -406,7 +406,7 @@ input, select, textarea {
 				display: block;
 				margin: 0 auto;
 				border-radius: 100%;
-				box-shadow: 0 0 0 0.6em #ffffff;
+				box-shadow: 0 0 0 0.5em #ffffff;
 			}
 
 			#main .avatar:before {
